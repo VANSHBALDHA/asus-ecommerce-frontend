@@ -1,17 +1,14 @@
 import React, { useMemo } from 'react';
 import Link from 'next/link';
 import moment from 'moment';
-import Image from 'next/image';
 import { getStrapiImageURL } from '~/services/strapiServices/image/getStrapiImageService';
 
 const PostGrid = ({ post }) => {
     const thumbnailImage = post.attributes?.thumbnail ? (
-        <Image
+        <img
             src={getStrapiImageURL(post.attributes.thumbnail)}
             alt=""
             layout="responsive"
-            width={200}
-            height={200}
         />
     ) : (
         <img src="https://placehold.co/600x400" alt="" />

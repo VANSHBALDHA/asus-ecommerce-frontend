@@ -1,33 +1,30 @@
 import React from 'react';
 import { formatCurrency } from '~/utilities/product-helper';
 import Link from 'next/link';
-import Image from 'next/image';
 import { getStrapiImageURL } from '~/services/strapiServices/image/getStrapiImageService';
 
 export default function useProduct(product, productID) {
     const productPrice = product?.sale_price ? (
         <p className="ps-product__price sale">
-            <span>$</span>
+            <span>₹</span>
             {formatCurrency(product.sale_price)}
             <del className="ml-2">
-                <span>$</span>
+                <span>₹</span>
                 {formatCurrency(product?.price)}
             </del>
         </p>
     ) : (
         <p className="ps-product__price">
-            <span>$</span>
+            <span>₹</span>
             {formatCurrency(product?.price)}
         </p>
     );
 
     const productThumbnailImage = product?.thumbnail ? (
-        <Image
+        <img
             src={getStrapiImageURL(product.thumbnail)}
             alt=""
             layout="responsive"
-            width={200}
-            height={200}
         />
     ) : (
         <img src="https://placehold.co/400x400" alt="" />

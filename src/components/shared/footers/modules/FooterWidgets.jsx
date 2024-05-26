@@ -47,10 +47,10 @@ const FooterWidgets = () => (
                     <Link href="/page/terms">Term & Condition</Link>
                 </li>
                 <li>
-                    <Link href="/page/blank">Shipping</Link>
+                    <Link href="/page/shipping">Shipping</Link>
                 </li>
                 <li>
-                    <Link href="/page/blank">Return</Link>
+                    <Link href="/page/return-policy">Return</Link>
                 </li>
                 <li>
                     <Link href="/page/faqs">FAQs</Link>
@@ -68,10 +68,10 @@ const FooterWidgets = () => (
                     <Link href="/page/about-us">About Us</Link>
                 </li>
                 <li>
-                    <Link href="/page/blank">Affilate</Link>
+                    <Link href="/page/affilate">Affilate</Link>
                 </li>
                 <li>
-                    <Link href="/page/blank">Career</Link>
+                    <Link href="/page/career">Career</Link>
                 </li>
                 <li>
                     <Link href="/page/contact-us">Contact Us</Link>

@@ -1,20 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Promotion = ({ link, image }) => {
-    if (image) {
-        return (
+const Promotion = ({ link }) => {
+    return (
+        <>
             <Link href={link} className="ps-collection">
-                <img src={image} alt="martfury" />
+                <img src="https://beta.apinouthemes.com/uploads/promotion_1_d6deb591f0.jpeg" alt="martfury" />
             </Link>
-        );
-    } else {
-        return (
-            <Link href={link ? link : '/shop'} className="ps-collection">
-                <img src="/static/img/not-found.jpg" alt="martfury" />
+            <Link href={link} className="ps-collection">
+                <img src="https://beta.apinouthemes.com/uploads/promotion_2_d252453586.jpeg" alt="martfury" />
             </Link>
-        );
-    }
+        </>
+
+    );
 };
 
 export default Promotion;

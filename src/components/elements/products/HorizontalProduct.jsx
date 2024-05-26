@@ -18,9 +18,9 @@ const HorizontalProduct = ({ product }) => {
             </div>
             <div className="ps-product__content">
                 {title}
-                <div className="ps-product__rating">
+                {/* <div className="ps-product__rating">
                     <Rating />
-                </div>
+                </div> */}
                 {price}
             </div>
         </div>

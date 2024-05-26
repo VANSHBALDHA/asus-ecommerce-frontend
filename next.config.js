@@ -1,7 +1,7 @@
 const nextSettings = {
     //transpilePackages: ['ahooks'],
     optimizeFonts: false,
-    // output: "export",
+    output: "export",
 
     eslint: {
         ignoreDuringBuilds: true,

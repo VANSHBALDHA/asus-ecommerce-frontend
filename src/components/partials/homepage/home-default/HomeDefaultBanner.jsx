@@ -25,8 +25,8 @@ const HomeDefaultBanner = () => {
 
         return primaryBanner
             ? primaryBanner.attributes.images.map((item) =>
-                  getStrapiImageURL(item?.image)
-              )
+                getStrapiImageURL(item?.image)
+            )
             : [];
     }, [loading, banners]);
 
@@ -38,8 +38,8 @@ const HomeDefaultBanner = () => {
 
         return secondBanner
             ? secondBanner.attributes.images.map((item) =>
-                  getStrapiImageURL(item?.image)
-              )
+                getStrapiImageURL(item?.image)
+            )
             : [];
     }, [loading, banners]);
 
@@ -54,41 +54,40 @@ const HomeDefaultBanner = () => {
         prevArrow: <PrevArrow />,
     };
 
-    const mainCarouselItems = useMemo(() => {
-        if (loading || primaryBannerItems.length === 0) return null;
+    const mainCarouselItems = () => {
         return (
             <Slider {...carouselSetting} className="ps-carousel">
-                {primaryBannerItems.map((item, index) => (
-                    <div className="slide-item" key={item.id} key={index}>
-                        <Link
-                            href={'/shop'}
-                            className="ps-banner-item--default bg--cover"
-                            style={{
-                                backgroundImage: `url(${item})`,
-                            }}
-                        />
-                    </div>
-                ))}
+                <div className="slide-item">
+                    <Link
+                        href={'/shop'}
+                        className="ps-banner-item--default bg--cover"
+                    >
+                        <img src="https://beta.apinouthemes.com/uploads/slide_3_1fcb990278.jpeg" alt="" />
+                    </Link>
+                </div>
+                <div className="slide-item">
+                    <Link
+                        href={'/shop'}
+                        className="ps-banner-item--default bg--cover"
+                    >
+                        <img src="https://dockanti.com/storage/sliders/1-lg.jpg" alt="" />
+                    </Link>
+                </div>
             </Slider>
+
         );
-    }, [loading, primaryBannerItems]);
+    };
 
     // Views
 
     return (
         <div className="ps-home-banner ps-home-banner--1">
             <div className="ps-container">
-                <div className="ps-section__left">{mainCarouselItems}</div>
+                <div className="ps-section__left">{mainCarouselItems()}</div>
                 <div className="ps-section__right">
-                    {secondBannerItems.length > 0
-                        ? secondBannerItems.map((item, index) => (
-                              <Promotion
-                                  key={index}
-                                  link="/shop"
-                                  image={item}
-                              />
-                          ))
-                        : null}
+                    <Promotion
+                        link="/shop"
+                    />
                 </div>
             </div>
         </div>

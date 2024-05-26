@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useEffect, useMemo } from 'react';
 import Promotion from '~/components/elements/media/Promotion';
 import useBanner from '~/hooks/useBanner';
@@ -21,22 +22,47 @@ const HomeAdsColumns = () => {
 
         return items
             ? items.attributes.images.map((item) =>
-                  getStrapiImageURL(item?.image)
-              )
+                getStrapiImageURL(item?.image)
+            )
             : [];
     }, [loading, banners]);
 
     return (
+        // <div className="ps-home-ads">
+        //     <div className="ps-container">
+        //         <div className="row">
+        //             {bannerItems.map((item, index) => (
+        //                 <div
+        //                     className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12"
+        //                     key={index}>
+        //                     <Promotion link="/shop" image={item} />
+        //                 </div>
+        //             ))}
+        //         </div>
+        //     </div>
+        // </div>
+
         <div className="ps-home-ads">
             <div className="ps-container">
                 <div className="row">
-                    {bannerItems.map((item, index) => (
-                        <div
-                            className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12"
-                            key={index}>
-                            <Promotion link="/shop" image={item} />
-                        </div>
-                    ))}
+                    <div
+                        className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                        <Link href="/shop" className="ps-collection">
+                            <img src="https://beta.apinouthemes.com/uploads/1_8da96bf1ad.jpeg" alt="martfury" />
+                        </Link>
+                    </div>
+                    <div
+                        className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                        <Link href="/shop" className="ps-collection">
+                            <img src="https://beta.apinouthemes.com/uploads/2_1f62869338.jpeg" alt="martfury" />
+                        </Link>
+                    </div>
+                    <div
+                        className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                        <Link href="/shop" className="ps-collection">
+                            <img src="https://beta.apinouthemes.com/uploads/3_795c4ca51b.jpeg" alt="martfury" />
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

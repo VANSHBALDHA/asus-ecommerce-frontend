@@ -1,5 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { getStrapiImageURL } from '~/services/strapiServices/image/getStrapiImageService';
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -15,18 +14,13 @@ import 'lightgallery/scss/lg-zoom.scss';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
-const ThumbnailDefault = ({ product, vertical = true }) => {
-    const images = useMemo(() => {
-        if (product.attributes.images.data?.length > 0) {
-            return product.attributes.images.data.map((image) => {
-                return {
-                    url: getStrapiImageURL(image, 'large', true),
-                };
-            });
-        } else {
-            return [];
-        }
-    }, [product]);
+const ThumbnailDefault = ({ vertical = true }) => {
+    const images = [
+        { url: 'https://beta.apinouthemes.com/uploads/1df60e151e7940059d2949c313bccb84.jpg' },
+        { url: 'https://beta.apinouthemes.com/uploads/c80df855abc949908f9dfb9bf5b96de9.jpg' },
+        { url: 'https://beta.apinouthemes.com/uploads/c80df855abc949908f9dfb9bf5b96de9.jpg' },
+        // Add more static images as needed
+    ];
 
     const [activeIndex, setActiveIndex] = useState(0);
     const primarySwiperRef = useRef(null);
@@ -89,7 +83,7 @@ const ThumbnailDefault = ({ product, vertical = true }) => {
                                     <LightGallery
                                         speed={500}
                                         plugins={[lgThumbnail, lgZoom]}>
-                                        <img src={item.url} alt={item.url} />
+                                        <img src={item.url} alt={`Image ${index + 1}`} />
                                     </LightGallery>
                                 </a>
                             </SwiperSlide>
@@ -119,10 +113,9 @@ const ThumbnailDefault = ({ product, vertical = true }) => {
                         <SwiperSlide className="item" key={index}>
                             <img
                                 src={item.url}
-                                alt={item.url}
-                                className={`swiper-slide-image ${
-                                    index === activeIndex ? 'active' : ''
-                                }`}
+                                alt={`Thumbnail ${index + 1}`}
+                                className={`swiper-slide-image ${index === activeIndex ? 'active' : ''
+                                    }`}
                                 onClick={() => setActiveIndex(index)}
                             />
                         </SwiperSlide>

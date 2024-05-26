@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useEffect, useMemo } from 'react';
 import Promotion from '~/components/elements/media/Promotion';
 import useBanner from '~/hooks/useBanner';
@@ -36,14 +37,30 @@ const HomeAds = () => {
     }, [loading, banners]);
 
     return (
+        // <div className="ps-home-ads">
+        //     <div className="ps-container">
+        //         <div className="row">
+        //             <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+        //                 <Promotion link="/shop" image={firstBanner} />
+        //             </div>
+        //             <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+        //                 <Promotion link="/shop" image={secondBanner} />
+        //             </div>
+        //         </div>
+        //     </div>
+        // </div>
         <div className="ps-home-ads">
             <div className="ps-container">
                 <div className="row">
                     <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
-                        <Promotion link="/shop" image={firstBanner} />
+                        <Link href="/shop" className="ps-collection">
+                            <img src="https://beta.apinouthemes.com/uploads/ad_1_c30a6ea8bf.jpeg" alt="ecommerce" />
+                        </Link>
                     </div>
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                        <Promotion link="/shop" image={secondBanner} />
+                        <Link href="/shop" className="ps-collection">
+                            <img src="https://beta.apinouthemes.com/uploads/ad_2_c45aa3f168.jpeg" alt="ecommerce" />
+                        </Link>
                     </div>
                 </div>
             </div>

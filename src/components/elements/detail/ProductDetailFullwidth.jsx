@@ -17,9 +17,9 @@ const ProductDetailFullwidth = ({ product }) => {
                     <ModuleDetailTopInformation product={product} />
                     <ModuleProductDetailDescription product={product} />
                     <ModuleDetailShoppingActions product={product} />
-                    <ModuleProductDetailSpecification product={product} />
-                    <ModuleProductDetailSharing />
-                    <ModuleDetailActionsMobile product={product} />
+                    {/* <ModuleProductDetailSpecification product={product} /> */}
+                    {/* <ModuleProductDetailSharing /> */}
+                    {/* <ModuleDetailActionsMobile product={product} /> */}
                 </div>
             </div>
             <DefaultDescription />

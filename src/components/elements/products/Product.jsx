@@ -24,10 +24,10 @@ const Product = ({ product }) => {
                 </Link>
                 <div className="ps-product__content">
                     {title}
-                    <div className="ps-product__rating">
+                    {/* <div className="ps-product__rating">
                         <Rating />
                         <span>02</span>
-                    </div>
+                    </div> */}
                     {price}
                 </div>
                 <div className="ps-product__content hover">

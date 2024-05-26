@@ -1,0 +1,184 @@
+.login_header_dropdown .ps-block__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login_header_dropdown span {
+    display: block;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.login_header_dropdown .ant-dropdown-link {
+    cursor: pointer;
+}
+
+
+/* For All Login Page Styles */
+.ant-modal-content {
+    background-color: #fff !important;
+}
+
+.ant-modal-header,
+.ant-modal-footer {
+    display: none !important;
+}
+
+.register_all_btn {
+    margin-top: 40px;
+}
+
+.gst_register_form {
+    padding: 100px 0 !important;
+}
+
+.gst_register_form_field {
+    background-color: #f8f9fa;
+}
+
+.gst-company-btn {
+    display: flex;
+    justify-content: space-around !important;
+    gap: 10px;
+}
+
+.gst-company-btn button {
+    padding: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    background-image: none !important;
+}
+
+.gst-company-btn-text {
+    background: #fff;
+    /* color: #383b3a; */
+    border-radius: 5px;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.gst-company-btn .active {
+    background: #fcb800;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: none !important;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.register_gst_company_btn {
+    display: inline-block;
+    /* padding: 15px 45px !important; */
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #000;
+    border: none;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: #fcb800;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    transition: 0.4s ease-in-out;
+}
+
+.register_gst_company_btn:hover {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+
+.gst_register_form .gst_register_form_field {
+    padding: 0 !important;
+}
+
+.gst_register_form_content {
+    padding: 25px;
+    background-color: #f8f9fa;
+}
+
+.gst_register_form_content .form-control{
+    background-color: #fff;
+}
+
+.gst_register_form_content h5 {
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.gst_register_form_content .ant-btn:disabled {
+    pointer-events: none;
+}
+
+.gst_register_form_content .button-disabled {
+    opacity: 30;
+    cursor: not-allowed;
+}
+
+.gst-number-input {
+    background-color: #fff !important;
+}
+
+.company_name {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.send_no_otp_btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    background: none;
+    border: none;
+}
+
+.otp-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.otp_input_box .otp-container>input {
+    border: 1px solid rgba(173, 181, 189, 1) !important;
+    font-size: 19px;
+    font-weight: 800;
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 !important;
+    border-radius: 5px;
+}
+
+.otp_input_box .otp-container>input:focus-visible {
+    border: 1px solid rgba(173, 181, 189, 1) !important;
+    outline: none;
+}
+
+/* Not GST Company Login Style */
+.email_phone_icon_btn {
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    padding: 10px 10px;
+    border: none;
+    background: none;
+    border-radius: 8px 0 0 8px;
+    transform: translate(0, -50%);
+    background-color: #e9e9e9;
+}
+
+.email_phone_input {
+    padding-left: 80px;
+    border-radius: 8px !important;
+}

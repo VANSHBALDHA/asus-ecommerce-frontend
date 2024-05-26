@@ -19,11 +19,11 @@ export default function DesktopNavigation() {
                         className="menu"
                     />
                     <ul className="navigation__extra">
-                        <li>
+                        {/* <li>
                             <Link href={'/vendor/become-a-vendor'}>
                                 Sell on Ecommerce
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link href={'/account/order-tracking'}>
                                 Track your order
@@ -32,9 +32,9 @@ export default function DesktopNavigation() {
                         {/* <li>
                             <CurrencyDropdown />
                         </li> */}
-                        <li>
+                        {/* <li>
                             <LanguageSwicher />
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>

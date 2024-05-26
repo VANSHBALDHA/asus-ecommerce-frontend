@@ -34,9 +34,7 @@ const HomeDefaultDealOfDay = ({ collectionSlug, fullWidth = true }) => {
             }
             return (
                 <Slider {...carouselFullwidth} className="ps-carousel outside">
-                    {products.map((item) => (
-                        <DealOfDayProduct product={item} key={item.id} />
-                    ))}
+                    <DealOfDayProduct />
                 </Slider>
             );
         }
@@ -51,13 +49,13 @@ const HomeDefaultDealOfDay = ({ collectionSlug, fullWidth = true }) => {
                             <h3>Deal of the day</h3>
                         </div>
                         <div className="ps-block__right">
-                            <figure>
+                            {/* <figure>
                                 <figcaption>End in:</figcaption>
                                 <CountDownSimple
                                     timeTillDate="12 31 2024, 6:00 am"
                                     timeFormat="MM DD YYYY, h:mm a"
                                 />
-                            </figure>
+                            </figure> */}
                         </div>
                     </div>
                     <Link href={'/shop'}>View all</Link>
