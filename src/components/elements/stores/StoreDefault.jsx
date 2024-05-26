@@ -3,6 +3,7 @@ import Rating from '~/components/elements/Rating';
 import Link from 'next/link';
 
 const StoreDefault = ({ source }) => {
+    
 
     return (
         <>
@@ -15,8 +16,8 @@ const StoreDefault = ({ source }) => {
                     <figure>
                         <h4>
                             <Link
-                                href={'/store/[slug]'}
-                                as={`/store/${source.slug}`}>
+                                href="/store"
+                                as="/store">
                                 {source.name}
                             </Link>
                         </h4>
@@ -39,13 +40,13 @@ const StoreDefault = ({ source }) => {
                         />
                     </a>
                     <Link
-                        href={'/store/[slug]'}
-                        as={`/store/${source?.slug}`}
+                        href="/store"
+                        as="/store"
                         className="ps-btn">
                         Visit Store
                     </Link>
                 </div>
-            </article>
+            </article >
         </>
     );
 };

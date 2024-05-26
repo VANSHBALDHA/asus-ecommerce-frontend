@@ -13,7 +13,7 @@ export default function ModuleStoreInformation({ store }) {
                 </div>
                 <div className="ps-block__container">
                     <div className="ps-block__header">
-                        <h4>{store[0].name}</h4>
+                        <h4>GLOBAL OFFICE</h4>
                         <Rating />
                         <p>
                             <strong>85% Positive</strong> (562 rating)
@@ -30,7 +30,7 @@ export default function ModuleStoreInformation({ store }) {
                         </p>
                         <span className="ps-block__divider"></span>
                         <p>
-                            <strong>Address</strong> {store[0].address}
+                            <strong>325 Orchard Str, New York, United States (US)</strong> hello
                         </p>
                         <figure>
                             <figcaption>Foloow us on social</figcaption>
@@ -61,7 +61,7 @@ export default function ModuleStoreInformation({ store }) {
                     <div className="ps-block__footer">
                         <p>
                             Call us directly
-                            <strong>{store[0].phone}</strong>
+                            <strong>(+053) 77-637-3300</strong>
                         </p>
                         <p>or Or if you have any question</p>
                         <a
