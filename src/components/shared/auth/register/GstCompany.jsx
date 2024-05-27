@@ -5,6 +5,8 @@ import axios from 'axios';
 import { Button, Spin, message } from 'antd';
 import { CheckOutlined } from '@ant-design/icons';
 import dynamic from 'next/dynamic';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css'
 const OTPInput = dynamic(() => import('otp-input-react'), { ssr: false });
 
 const GstCompanyRegister = (props) => {
@@ -399,6 +401,15 @@ const GstCompanyRegister = (props) => {
                                             name="phone"
                                             placeholder="Enter phone number"
                                             disabled={phoneDisable}
+                                            onChange={(e) =>
+                                                handlePhoneChange(e)
+                                            }
+                                        />
+                                        <PhoneInput
+                                            country={'in'}
+                                            disableDropdown={true}
+                                            disableCountryCode={true}
+                                            value={data?.phone}
                                             onChange={(e) =>
                                                 handlePhoneChange(e)
                                             }
